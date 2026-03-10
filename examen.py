@@ -8,19 +8,19 @@ preguntas = [
        "correcta": "5"
    },
    {
-       "texto": "¿Cuántos puntos vale un triple?",
+       "texto": "¿Cuántos puntos vale un tiro normal?",
        "opciones": ["1", "2", "3", "4"],
-       "correcta": "3"
+       "correcta": "2"
    },
    {
-       "texto": "¿Cuánto dura un partido oficial FIBA (tiempo total)?",
-       "opciones": ["32 minutos", "40 minutos", "48 minutos", "60 minutos"],
-       "correcta": "40 minutos"
+       "texto": "¿Cuántos anillos tienen Curry?",
+       "opciones": ["2", "4", "0", "6"],
+       "correcta": "4"
    },
    {
-       "texto": "¿Qué acción ocurre cuando un jugador camina sin botar el balón?",
-       "opciones": ["Falta técnica", "Pasos", "Doble drible", "Salto ilegal"],
-       "correcta": "Pasos"
+       "texto": "¿Qué acción ocurre cuando un jugador le hacen falta?",
+       "opciones": ["Técnica", "Falta", "Doble drible", "Salto ilegal"],
+       "correcta": "Falta"
    },
    {
        "texto": "¿Cuántos tiros libres se lanzan normalmente tras una falta en acción de tiro fallada de 2 puntos?",
@@ -28,9 +28,9 @@ preguntas = [
        "correcta": "2"
    },
    {
-       "texto": "¿Qué posición suele dirigir el juego?",
+       "texto": "¿Qué posición suele marcar mucho?",
        "opciones": ["Pívot", "Escolta", "Base", "Alero"],
-       "correcta": "Base"
+       "correcta": "Escolta"
    },
    {
        "texto": "¿Cuántos segundos tiene un equipo para lanzar en una posesión?",
@@ -38,14 +38,14 @@ preguntas = [
        "correcta": "24"
    },
    {
-       "texto": "¿Qué jugador es conocido como 'Air Jordan'?",
-       "opciones": ["LeBron James", "Kobe Bryant", "Michael Jordan", "Stephen Curry"],
-       "correcta": "Michael Jordan"
+       "texto": "¿Cuánto mide Kevin Durant?",
+       "opciones": [" 2.11", "1.8", "2.13", "2.07"],
+       "correcta": "2.11"
    },
    {
-       "texto": "¿Qué liga es la más famosa del mundo?",
-       "opciones": ["ACB", "Euroliga", "NBA", "Liga Endesa"],
-       "correcta": "NBA"
+       "texto": "¿Quién es el GOAT de la NBA",
+       "opciones": ["Jordan", "LeJames", "Magic", "Marco"],
+       "correcta": "Jordan"
    }
 ]
 
@@ -94,14 +94,14 @@ if boton_enviar:
    st.write(f"❌ Errores: {errores} (−0.25 por error)")
 
    if nota < 2:
-       st.error("😱 No era tan difícil, no has estudiado...")
+       st.error("No te gusta el baloncesto😒")
        st.error(f"Has sacado un {nota:.2f}. ¡Toca estudiar un poco más!")
    elif 3 <= nota < 5:
        st.warning("📉 No has estudiado.")
        st.caption("Hay que repasar las reglas básicas y ver algún partido con atención.")
        st.error(f"Has sacado un {nota:.2f}. ¡Toca estudiar un poco más!")
    elif 5 <= nota < 6:
-       st.info("✅ Has salvado el curso por los pelos de un calvo 👨‍🦲.")
+       st.info("✅Aprobado")
        st.caption("Justo aprobado, pero con este nivel no entras en el quinteto titular… aún.")
        st.error(f"Has sacado un {nota:.2f}. ¡Aprobado por los pelos!")
    elif 6 <= nota < 7:
@@ -112,11 +112,11 @@ if boton_enviar:
        st.success("🎯 Has estudiado.")
        st.balloons()
    elif 9 <= nota < 10:
-       st.success("🏆 ¡Eres un crack del baloncesto!")
+       st.success("🏆 ¡Eres un viciado del baloncesto!")
        st.snow()
        st.balloons()
    else:  # 10
-       st.success("🌟 **Excelente** — ¡Perfecto!")
+       st.success(" ¡Perfecto!")
        st.snow()
        st.balloons()
        st.markdown("🏀🔥 ¡Eres un apasionado del basket!")
